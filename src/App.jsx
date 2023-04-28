@@ -1,9 +1,10 @@
 import "./App.css";
 import { useState } from "react";
-import Increment from "./assets/components/Increment";
-import Decrement from "./assets/components/Decrement";
-import Reset from "./assets/components/Reset";
-import AddCounter from "./assets/components/AddCounter";
+// import Increment from "./assets/components/Increment";
+// import Decrement from "./assets/components/Decrement";
+// import Reset from "./assets/components/Reset";
+// import AddCounter from "./assets/components/AddCounter";
+import Counter from "./assets/components/Counter";
 
 function App() {
   //console.log(App);
@@ -11,7 +12,9 @@ function App() {
   console.log(counter);
   return (
     <>
-      <div>
+      <p>{counter}</p>
+      <Counter counter={counter} setCounter={setCounter} />
+      {/* <div>
         <div>
           <AddCounter counter={counter} setCounter={setCounter} />
         </div>
@@ -25,7 +28,7 @@ function App() {
       </div>
       <div>
         <Reset counter={counter} setCounter={setCounter} />
-      </div>
+      </div> */}
     </>
   );
 }

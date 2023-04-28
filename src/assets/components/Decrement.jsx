@@ -1,16 +1,13 @@
-const AddCounter = (props) => {
-  return (
+const Increment = (props) => {
+  return props.counter < 1000 ? (
     <button
-      className="size"
       onClick={() => {
-        {
-          props.setAddCounter();
-        }
+        props.setCounter(props.counter - 1);
       }}
     >
-      Add Counter
+      -
     </button>
-  );
+  ) : null;
 };
 
-export default AddCounter;
+export default Increment;
