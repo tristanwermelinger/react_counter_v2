@@ -15,7 +15,7 @@ const Counter = (props) => {
         onClick={() => {
           const newCounter = [...counter];
           newCounter.push(+1);
-          setCoutner(newCounter);
+          setCounter(newCounter);
           // props.setCounter(props.counter + 1);
         }}
       >
