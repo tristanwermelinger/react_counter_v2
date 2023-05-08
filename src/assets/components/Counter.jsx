@@ -2,30 +2,35 @@ const Counter = (props) => {
   //console.log(props);
   return (
     <div>
-      <button className="size" onClick={() => {}}>
-        Reset
-      </button>
-
       <button
         onClick={() => {
-          // props.setCounter(props.counter + 1);
+          const newCounter = [...props.counter];
+          newCounter[0] = newCounter[0] + 1;
+          props.setCounter(newCounter);
         }}
       >
         +
       </button>
-
-      <p>{props.counter}</p>
-
-      <button>-</button>
-
-      {/* <button
-        className="size"
+      <button
         onClick={() => {
-          props.setAddCounter();
+          const newCounter = [...props.counter];
+          newCounter[0] = newCounter[0] - 1;
+          props.setCounter(newCounter);
         }}
       >
-        AddCounter
-      </button> */}
+        -
+      </button>
+
+      <p>{props.counter[0]}</p>
+      <button
+        onClick={() => {
+          const newCounter = [...props.counter];
+          newCounter[0] = newCounter[0] * 0;
+          props.setCounter(newCounter);
+        }}
+      >
+        Reset
+      </button>
     </div>
   );
 };

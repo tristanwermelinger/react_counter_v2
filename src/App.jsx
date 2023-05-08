@@ -14,11 +14,9 @@ const App = () => {
 
   return (
     <>
-      {counter.map((elem) => {
+      {counter.map((elem, index) => {
         return (
-          <span key={elem}>
-            <Counter counter={counter} setCounter={setCounter} />
-          </span>
+          <Counter key={index} counter={counter} setCounter={setCounter} />
         );
       })}
 
