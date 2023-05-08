@@ -8,27 +8,13 @@ import Counter from "./assets/components/Counter";
 
 function App() {
   //console.log(App);
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState([0]);
   console.log(counter);
   return (
     <>
-      <p>{counter}</p>
-      <Counter counter={counter} setCounter={setCounter} />
-      {/* <div>
-        <div>
-          <AddCounter counter={counter} setCounter={setCounter} />
-        </div>
-      </div>
-      <div>
-        <Increment counter={counter} setCounter={setCounter} />
-      </div>
-      <p>{counter}</p>
-      <div>
-        <Decrement counter={counter} setCounter={setCounter} />
-      </div>
-      <div>
-        <Reset counter={counter} setCounter={setCounter} />
-      </div> */}
+      {counter.map((elem) => {
+        return <Counter counter={counter} setCounter={setCounter} />;
+      })}
     </>
   );
 }
