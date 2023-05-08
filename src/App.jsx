@@ -6,17 +6,21 @@ import { useState } from "react";
 // import AddCounter from "./assets/components/AddCounter";
 import Counter from "./assets/components/Counter";
 
-function App() {
+const App = () => {
   //console.log(app);
   const [counter, setCounter] = useState([0]);
   console.log(counter);
   return (
     <>
       {counter.map((elem) => {
-        return <Counter counter={counter} setCounter={setCounter} />;
+        return (
+          <span key={elem}>
+            <Counter counter={counter} setCounter={setCounter} />
+          </span>
+        );
       })}
     </>
   );
-}
+};
 
 export default App;

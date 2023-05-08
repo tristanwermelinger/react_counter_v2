@@ -1,5 +1,5 @@
 const Counter = (props) => {
-  console.log(props);
+  //console.log(props);
   return (
     <div>
       <button
@@ -13,12 +13,17 @@ const Counter = (props) => {
 
       <button
         onClick={() => {
-          props.setCounter(props.counter + 1);
+          const newCounter = [...counter];
+          newCounter.push(+1);
+          setCoutner(newCounter);
+          // props.setCounter(props.counter + 1);
         }}
       >
         +
       </button>
+
       <p>{props.counter}</p>
+
       <button
         onClick={() => {
           props.setCounter(props.counter - 1);
@@ -26,6 +31,7 @@ const Counter = (props) => {
       >
         -
       </button>
+
       <button
         className="size"
         onClick={() => {
