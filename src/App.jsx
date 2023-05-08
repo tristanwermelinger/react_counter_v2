@@ -7,7 +7,7 @@ import { useState } from "react";
 import Counter from "./assets/components/Counter";
 
 function App() {
-  //console.log(App);
+  //console.log(app);
   const [counter, setCounter] = useState([0]);
   console.log(counter);
   return (

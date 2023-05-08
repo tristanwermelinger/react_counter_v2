@@ -5,9 +5,7 @@ const Counter = (props) => {
       <button
         className="size"
         onClick={() => {
-          {
-            props.setCounter(0);
-          }
+          props.setCounter(0);
         }}
       >
         Reset
